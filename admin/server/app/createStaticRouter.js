@@ -13,11 +13,15 @@ var path = require('path');
 var str = require('string-to-stream');
 
 function buildFieldTypesStream (fieldTypes) {
+	console.log('------------------- TAMAS START -----------------')
 	var src = '';
 	var types = Object.keys(fieldTypes);
+	console.log(fieldTypes);
 	['Column', 'Field', 'Filter'].forEach(function (i) {
+		console.log(i)
 		src += 'exports.' + i + 's = {\n';
 		types.forEach(function (type) {
+			console.log(type)
 			if (typeof fieldTypes[type] !== 'string') return;
 			src += type + ': require("../../fields/types/' + type + '/' + fieldTypes[type] + i + '"),\n';
 		});
@@ -26,9 +30,18 @@ function buildFieldTypesStream (fieldTypes) {
 			src += 'id: require("../../fields/components/columns/IdColumn"),\n';
 			src += '__unrecognised__: require("../../fields/components/columns/InvalidColumn"),\n';
 		}
+		
 
+
+		console.log(src)
 		src += '};\n';
 	});
+
+	console.log('------------------- TAMAS END -----------------')
+
+	console.log(fieldType);
+
+	throw new Error("Something went badly wrong!");
 	return str(src);
 }
 
