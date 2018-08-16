@@ -12,6 +12,10 @@ var less = require('less-middleware');
 var path = require('path');
 var str = require('string-to-stream');
 
+function capitalizeFirstLetter(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function buildFieldTypesStream (fieldTypes) {
 	var src = '';
 	var types = Object.keys(fieldTypes);
@@ -22,7 +26,7 @@ function buildFieldTypesStream (fieldTypes) {
 
 			console.log('------------------ TAMAS ------------')
 			console.log(fieldTypes[type] + i);
-			src += type + ': require("../../fields/types/' + type + '/' + fieldTypes[type] + i + '"),\n';
+			src += type + ': require("../../fields/types/' + type + '/' + capitalizeFirstLetter(fieldTypes[type]) + i + '"),\n';
 			console.log(src)
 			console.log('---------------- TAMAS END TEST --------------')
 		});
