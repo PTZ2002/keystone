@@ -21,7 +21,7 @@ function buildFieldTypesStream (fieldTypes) {
 			if (typeof fieldTypes[type] !== 'string') return;
 
 			console.log('------------------ TAMAS ------------')
-			console.log(fieldType);
+			console.log(fieldTypes[type] + i);
 			src += type + ': require("../../fields/types/' + type + '/' + fieldTypes[type] + i + '"),\n';
 			console.log(src)
 			console.log('---------------- TAMAS END TEST --------------')
