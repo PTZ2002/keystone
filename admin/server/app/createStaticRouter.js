@@ -19,7 +19,12 @@ function buildFieldTypesStream (fieldTypes) {
 		src += 'exports.' + i + 's = {\n';
 		types.forEach(function (type) {
 			if (typeof fieldTypes[type] !== 'string') return;
-			src += type + ': require("../../fields/types/' + type + '/' + upperCaseFirstLetter(fieldTypes[type]) + i + '"),\n';
+
+			console.log('------------------ TAMAS ------------')
+			console.log(fieldType);
+			src += type + ': require("../../fields/types/' + type + '/' + fieldTypes[type] + i + '"),\n';
+			console.log(src)
+			console.log('---------------- TAMAS END TEST --------------')
 		});
 		// Append ID and Unrecognised column types
 		if (i === 'Column') {
