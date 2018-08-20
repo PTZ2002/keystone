@@ -2,8 +2,8 @@ import React from 'react';
 import ItemsTableCell from '../../components/ItemsTableCell';
 import ItemsTableValue from '../../components/ItemsTableValue';
 
-var ColorColumn = React.createClass({
-	displayName: 'ColorColumn',
+var RecolorColumn = React.createClass({
+	displayName: 'RecolorColumn',
 	propTypes: {
 		col: React.PropTypes.object,
 		data: React.PropTypes.object,
@@ -40,4 +40,4 @@ var ColorColumn = React.createClass({
 	},
 });
 
-module.exports = ColorColumn;
+module.exports = RecolorColumn;

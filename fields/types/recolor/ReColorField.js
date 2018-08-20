@@ -12,10 +12,10 @@ import transparentSwatch from './transparent-swatch';
 import coloredSwatch from './colored-swatch';
 import theme from '../../../admin/client/theme';
 
-const ColorField = Field.create({
-	displayName: 'ColorField',
+const RecolorField = Field.create({
+	displayName: 'RecolorField',
 	statics: {
-		type: 'Color',
+		type: 'Recolor',
 	},
 	propTypes: {
 		onChange: React.PropTypes.func,
@@ -149,4 +149,4 @@ const classes = {
 	},
 };
 
-module.exports = ColorField;
+module.exports = RecolorField;
