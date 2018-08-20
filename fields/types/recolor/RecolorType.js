@@ -13,7 +13,7 @@ function recolor (list, path, options) {
 	color.super_.call(this, list, path, options);
 }
 recolor.properName = 'Recolor';
-util.inherits(color, FieldType);
+util.inherits(recolor, FieldType);
 
 recolor.prototype.validateInput = TextType.prototype.validateInput;
 recolor.prototype.validateRequiredInput = TextType.prototype.validateRequiredInput;
