@@ -39,9 +39,9 @@ function buildFieldTypesStream (fieldTypes) {
 
 	console.log('------------------- TAMAS END -----------------')
 
-	console.log(fieldType);
+	//console.log(fieldType);
 
-	throw new Error("Something went badly wrong!");
+	//throw new Error("Something went badly wrong!");
 	return str(src);
 }
 
