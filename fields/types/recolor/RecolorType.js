@@ -10,7 +10,7 @@ var util = require('util');
  */
 function recolor (list, path, options) {
 	this._nativeType = String;
-	color.super_.call(this, list, path, options);
+	recolor.super_.call(this, list, path, options);
 }
 recolor.properName = 'Recolor';
 util.inherits(recolor, FieldType);
