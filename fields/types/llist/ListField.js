@@ -5,9 +5,9 @@ import React from 'react';
 import Field from '../Field';
 import Domify from 'react-domify';
 
+import { Fields } from '../..';
 import { Button, GlyphButton } from '../../../admin/client/App/elemental';
 import InvalidFieldType from '../../../admin/client/App/shared/InvalidFieldType';
-import { Fields } from 'FieldTypes';
 
 let i = 0;
 function generateId () {
@@ -72,8 +72,7 @@ module.exports = Field.create({
 	},
 	renderFieldsForItem (index, value) {
 		return Object.keys(this.props.fields).map((path) => {
-            const field = this.props.fields[path];
-
+			const field = this.props.fields[path];
 			if (typeof Fields[field.type] !== 'function') {
 				return React.createElement(InvalidFieldType, { type: field.type, path: field.path, key: field.path });
 			}

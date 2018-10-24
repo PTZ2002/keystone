@@ -18,6 +18,12 @@ var moduleRoot = (function (_rootPath) {
 })(module.parent ? module.parent.paths[0] : module.paths[0]);
 
 
+var Fields = require ('./lib/fieldTypes');
+//console.log(Fields['file']);
+//console.log(Fields.file);
+//throw new Error("Something went badly wrong!");
+
+
 /**
  * Keystone Class
  */
